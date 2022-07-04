@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="http://www.koda.nu/simple.js">
+      let ball = {x:100, y: 100, w: 50}
+      let dist = 50
+      function update()
+      {
+          clearScreen();
+          if (keyboard.left && ball.x > ball.w) ball.x -= dist
+          if (keyboard.right && ball.x < (window.innerWidth - ball.w)) ball.x += dist
+          if (keyboard.up && ball.y > ball.w) ball.y -= dist
+          if (keyboard.down && ball.y < (window.innerHeight - ball.w)) ball.y += dist
+          circle(ball.x, ball.y, ball.w, "red")
+      }
+    </script>
+  </body>
+</html>
